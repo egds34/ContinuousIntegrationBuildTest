@@ -18,6 +18,11 @@ module.exports = function(config) {
       'src/**/*.js'
     ],
 
+    plugins : [
+        'karma-junit-reporter',
+        'karma-qunit',
+        'karma-chrome-launcher'
+    ],
 
     // list of files / patterns to exclude
     exclude: [
@@ -33,8 +38,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://www.npmjs.com/search?q=keywords:karma-reporter
-    reporters: ['progress'],
-
+    reporters: ['junit'],
 
     // web server port
     port: 9876,
@@ -61,9 +65,11 @@ module.exports = function(config) {
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: true,
-    reporters: ['dots', 'junit'],
+    reporters: ['junit'],
     junitReporter: {
-      outputFile: 'test-results.xml'
+      outputFile: 'test-results.xml',
+      outputDir: '../testResults', // results will be saved as $outputDir/$browserName.xml
+      useBrowserName: false
     },
 
     // Concurrency level
