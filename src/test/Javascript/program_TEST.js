@@ -17,3 +17,7 @@ QUnit.test('input = 1', assert => {
 QUnit.test('input = 1', assert => {
   assert.equal(factorial(7), 5040);
 });
+
+QUnit.test('input = 1', assert => {
+  assert.equal(factorial(7), -1);
+});
