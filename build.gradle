@@ -20,5 +20,5 @@ test {
 
 task karma(type:Exec)
 {
-    commandLine 'karma', 'start', '--single-run true'
+    commandLine 'karma', 'start C:\\Users\\chris\\Documents\\InteliJ\\ContinuousIntegrationBuildTest\\karma.conf.js', '--single-run true'
 }
