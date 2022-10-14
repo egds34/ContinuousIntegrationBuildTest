@@ -68,7 +68,6 @@ module.exports = function(config) {
     reporters: ['junit'],
     junitReporter: {
       outputFile: 'test-results.xml',
-      outputDir: '../testResults', // results will be saved as $outputDir/$browserName.xml
       useBrowserName: false
     },
 
